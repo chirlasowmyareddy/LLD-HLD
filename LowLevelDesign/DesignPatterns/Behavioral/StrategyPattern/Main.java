@@ -1,5 +1,8 @@
 package LLD_HLD.LowLevelDesign.DesignPatterns.Behavioral.StrategyPattern;
 
+import LLD_HLD.LowLevelDesign.DesignPatterns.Behavioral.StrategyPattern.Strategy.DriveStrategy;
+import LLD_HLD.LowLevelDesign.DesignPatterns.Behavioral.StrategyPattern.Strategy.NormalDriveStrategy;
+
 public class Main {
     public static void main(String[] args) {
         System.out.println("Hello");
@@ -7,7 +10,9 @@ public class Main {
         Vehicle vehicle = new SportsVehicle();
         vehicle.drive();
 
-        Vehicle vehicle1 =  new OffRoadVehicle();
+        //another way of using without creating OffRoadVehicle
+        DriveStrategy NormalDriveStrategy = new NormalDriveStrategy();
+        Vehicle vehicle1 =  new Vehicle(NormalDriveStrategy);
         vehicle1.drive();
 
         Vehicle vehicle2 = new GoodsVehicle();

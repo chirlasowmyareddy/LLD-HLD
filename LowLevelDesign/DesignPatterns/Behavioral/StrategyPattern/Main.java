@@ -11,6 +11,7 @@ public class Main {
         vehicle.drive();
 
         //another way of using without creating OffRoadVehicle
+        //but this is not as not hiding implementation details
         DriveStrategy NormalDriveStrategy = new NormalDriveStrategy();
         Vehicle vehicle1 =  new Vehicle(NormalDriveStrategy);
         vehicle1.drive();

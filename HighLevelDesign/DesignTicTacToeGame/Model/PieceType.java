@@ -1,4 +1,7 @@
 package LLD_HLD.HighLevelDesign.DesignTicTacToeGame.Model;
 
-public class PieceType {
+public enum PieceType {
+    X,
+    O
+
 }

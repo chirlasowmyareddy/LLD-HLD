@@ -26,5 +26,4 @@ public class VehicleInventoryManagement {
         }
         return availableVehicles;
     }
-
 }

@@ -25,6 +25,4 @@ public class MathExpressionEvaluatorDemo {
 
         System.out.println(parentExpression.evaluate());
     }
-
-    
 }

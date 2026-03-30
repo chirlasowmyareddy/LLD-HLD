@@ -1,0 +1,32 @@
+Rate limit the users based on userId and their tier(free or premium)
+Suport 4 types (and extensible)
+Thread safe and efficient
+
+Approach
+UserTier->enum(done)
+    -FREE
+    -PREMIUM
+User (done)
+    - userId :String
+    - Tier  : UserTier
+
+RateLimiterService
+    -rateLimiters :Map<UserTier,RateLimiter>//two rl one for free and one for premium users
+    +allowRequest(user):boolean
+
+RateLimitConfig(done)
+    -maxRequests:int
+    -windowInSecond:int
+RateLimiter(abstact class)(done)
+    #config :RateLimitConfig
+    #type:RateLimitType
+    +allowRequest(userId):boolean
+
+4 different classes which extends RateLimiter 
+/*
+As there are many classes here we can use factory design pattern where it has the centralized logic for creatign the logic 
+*/
+TokenBucket 
+FixedWindow
+SlidingWindowLogs
+SlidingWindowCounter

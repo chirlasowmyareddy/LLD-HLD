@@ -1,0 +1,7 @@
+can be used while billing strategy 
+
+ratelimiter at picking the algos
+
+tictactoe at win checking
+
+parking lot at slot allocation

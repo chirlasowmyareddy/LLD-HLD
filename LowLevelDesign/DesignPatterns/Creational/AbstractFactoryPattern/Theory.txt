@@ -1,0 +1,7 @@
+A common real-world example of Abstract Factory is UI component creation.
+
+For example, in an application that supports multiple platforms like Windows and Mac, we need to create related UI components such as Button and Checkbox.
+
+Instead of creating them individually, we use an Abstract Factory where WindowsFactory creates WindowsButton and WindowsCheckbox, and MacFactory creates MacButton and MacCheckbox.
+
+This ensures that all UI components belong to the same family and are consistent.
